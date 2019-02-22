@@ -1,4 +1,4 @@
-package com.pixelart.lastfmalbumsearch.ui.home
+package com.pixelart.lastfmalbumsearch.ui.homescreen
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

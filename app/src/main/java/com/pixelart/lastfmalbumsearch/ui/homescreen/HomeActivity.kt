@@ -1,9 +1,8 @@
-package com.pixelart.lastfmalbumsearch.ui.home
+package com.pixelart.lastfmalbumsearch.ui.homescreen
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.snackbar.Snackbar
 import com.pixelart.lastfmalbumsearch.R
 
 import kotlinx.android.synthetic.main.activity_home.*

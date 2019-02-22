@@ -10,7 +10,7 @@
               android:divider="?android:attr/dividerHorizontal"
               android:orientation="horizontal"
               android:showDividers="middle"
-              tools:context=".ui.home.HomeActivity">
+              tools:context=".ui.homescreen.HomeActivity">
 
     <!--
     This layout is a two-pane layout for the Items
@@ -27,7 +27,7 @@
                                                android:layout_marginLeft="16dp"
                                                android:layout_marginRight="16dp"
                                                app:layoutManager="LinearLayoutManager"
-                                               tools:context="com.pixelart.lastfmalbumsearch.ui.home.HomeActivity"
+                                               tools:context="com.pixelart.lastfmalbumsearch.ui.homescreen.HomeActivity"
                                                tools:listitem="@layout/albums_rv_layout"/>
 
     <FrameLayout

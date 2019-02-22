@@ -1,7 +1,7 @@
 package com.pixelart.lastfmalbumsearch.di.activity
 
 import com.pixelart.lastfmalbumsearch.factories.HomeViewModelFactory
-import com.pixelart.lastfmalbumsearch.ui.home.HomeActivity
+import com.pixelart.lastfmalbumsearch.ui.homescreen.HomeActivity
 import dagger.Subcomponent
 
 @ActivityScope

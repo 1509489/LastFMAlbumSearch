@@ -1,4 +1,4 @@
-package com.pixelart.lastfmalbumsearch.ui.detail
+package com.pixelart.lastfmalbumsearch.ui.detailscreen
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

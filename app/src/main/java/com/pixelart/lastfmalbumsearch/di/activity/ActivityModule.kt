@@ -3,7 +3,7 @@ package com.pixelart.lastfmalbumsearch.di.activity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import com.pixelart.lastfmalbumsearch.factories.HomeViewModelFactory
-import com.pixelart.lastfmalbumsearch.ui.home.HomeViewModel
+import com.pixelart.lastfmalbumsearch.ui.homescreen.HomeViewModel
 import dagger.Module
 import dagger.Provides
 

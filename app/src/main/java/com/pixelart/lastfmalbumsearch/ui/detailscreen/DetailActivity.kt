@@ -1,12 +1,11 @@
-package com.pixelart.lastfmalbumsearch.ui.detail
+package com.pixelart.lastfmalbumsearch.ui.detailscreen
 
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.MenuItem
 import com.pixelart.lastfmalbumsearch.R
-import com.pixelart.lastfmalbumsearch.ui.home.HomeActivity
+import com.pixelart.lastfmalbumsearch.ui.homescreen.HomeActivity
 import kotlinx.android.synthetic.main.activity_detail.*
 
 /**

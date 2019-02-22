@@ -3,7 +3,7 @@ package com.pixelart.lastfmalbumsearch.factories
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.pixelart.lastfmalbumsearch.data.repository.RepositoryImpl
-import com.pixelart.lastfmalbumsearch.ui.home.HomeViewModel
+import com.pixelart.lastfmalbumsearch.ui.homescreen.HomeViewModel
 import javax.inject.Inject
 
 class HomeViewModelFactory @Inject constructor(private val repositoryImpl: RepositoryImpl): ViewModelProvider.Factory {
