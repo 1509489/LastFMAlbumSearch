@@ -7,5 +7,6 @@ import com.pixelart.lastfmalbumsearch.data.repository.RepositoryImpl
 
 class HomeViewModel(private val repositoryImpl: RepositoryImpl): ViewModel() {
 
+    //Get the albums from the repository as live data
     fun getAlbums(album: String):LiveData<AlbumMatches> = repositoryImpl.getAlbums(album)
 }

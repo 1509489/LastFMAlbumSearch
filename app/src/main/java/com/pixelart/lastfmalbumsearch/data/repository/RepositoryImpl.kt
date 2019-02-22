@@ -14,6 +14,7 @@ import io.reactivex.schedulers.Schedulers
 class RepositoryImpl(private val networkService: NetworkService): Repository {
     private val response = MutableLiveData<AlbumMatches>()
 
+    //Get data from the network and return it as a live data object
     override fun getAlbums(album: String):LiveData<AlbumMatches> {
         networkService.getAlbums(album, API_KEY)
             .subscribeOn(Schedulers.io())

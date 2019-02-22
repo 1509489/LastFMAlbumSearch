@@ -6,8 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.pixelart.lastfmalbumsearch.R
-import com.pixelart.lastfmalbumsearch.dummy.DummyContent
-import kotlinx.android.synthetic.main.activity_detail.*
+import com.pixelart.lastfmalbumsearch.common.GlideApp
+import com.pixelart.lastfmalbumsearch.data.model.Album
+import com.pixelart.lastfmalbumsearch.ui.homescreen.HomeActivity
 import kotlinx.android.synthetic.main.fragment_detail.view.*
 
 /**
@@ -17,35 +18,32 @@ import kotlinx.android.synthetic.main.fragment_detail.view.*
  * on handsets.
  */
 class DetailFragment : Fragment() {
-
-    /**
-     * The dummy content this fragment is presenting.
-     */
-    private var item: DummyContent.DummyItem? = null
+    private var album: Album? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        arguments?.let {
-            if (it.containsKey(ARG_ITEM_ID)) {
-                // Load the dummy content specified by the fragment
-                // arguments. In a real-world scenario, use a Loader
-                // to load content from a content provider.
-                item = DummyContent.ITEM_MAP[it.getString(ARG_ITEM_ID)]
-                activity?.toolbar_layout?.title = item?.content
+        arguments?.let{
+            if(it.containsKey(ARG_ALBUM)){
+                //get the album based on the fragement arguments
+                album = it.getParcelable(ARG_ALBUM)
             }
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_detail, container, false)
 
-        // Show the dummy content as text in a TextView.
-        item?.let {
-            rootView.item_detail.text = it.details
+        //Setup the view elements for the fragment
+        rootView.apply {
+            tvAlbumName.text = album?.name
+            tvArtist.text = album?.artist
+
+            GlideApp.with(context)
+                    .load(album!!.image[2].text)
+                    .placeholder(R.drawable.placeholder_albumart)
+                    .error(R.drawable.placeholder_albumart)
+                    .into(ivAlbumArt)
         }
 
         return rootView
@@ -53,9 +51,8 @@ class DetailFragment : Fragment() {
 
     companion object {
         /**
-         * The fragment argument representing the item ID that this fragment
-         * represents.
+         * The fragment argument representing the album that this fragment.
          */
-        const val ARG_ITEM_ID = "item_id"
+        const val ARG_ALBUM = "album_args"
     }
 }
